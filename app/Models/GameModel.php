@@ -1,0 +1,1 @@
+<?php namespace App\Models; use CodeIgniter\Model; class GameModel extends Model { protected $table='games'; protected $allowedFields=['game_token','player1_id','player2_id','player1_code','player2_code','turn_player_id','status','winner_id','last_activity']; }
