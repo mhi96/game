@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title><?= $title ?? 'Guess The Code' ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { background: #f8f9fa; }
         .game-header { background: #343a40; color: #fff; padding: 10px 0; margin-bottom: 20px; }
@@ -26,9 +27,12 @@
     </style>
 </head>
 <body>
+    
 <div class="game-header text-center">
     Logged in as: <strong><?= esc(session()->get('username')) ?></strong>
     <a href="<?= site_url('logout') ?>" class="btn btn-sm btn-danger ml-3">Logout</a>
+    <a href="<?= site_url('dashboard') ?>" class="btn btn-sm btn-secondary ml-3">Dashboard</a>
+
 </div>
 
 <?php if(isset($game)): ?>

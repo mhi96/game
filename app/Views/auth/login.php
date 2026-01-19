@@ -74,6 +74,7 @@
     <form method="post" action="<?= site_url("login") ?>">
         <input name="email" placeholder="Email" type="text" required>
         <input type="password" name="password" placeholder="Password" required>
+        <input type="hidden" name="redirect_url" value="<?= esc($_GET['url'] ?? '') ?>">
         <button type="submit">Login</button>
     </form>
 
